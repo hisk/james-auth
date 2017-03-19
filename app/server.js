@@ -12,8 +12,7 @@ var express = require('express'),
 var hookJWTStrategy = require('./services/passportStrategy');
 
 // 3: Initializations.
-var app = express(),
-    APIRoutes = express.Router();
+var app = express();
 
 // 4: Parse as urlencoded and json.
 app.use(bodyParser.urlencoded({ extended: false }));
