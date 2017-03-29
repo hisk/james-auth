@@ -4,7 +4,7 @@
 #### Creating a Role-Based User Authentication System Using Angular, Express and MySQL Tutorial Series:
  * [Part 1: Setting up the Backend](https://hisk.io/role-based-authentication-with-angular-express-jwt-mysql-part-1)
  * [Part 2: Finishing the Backend](https://hisk.io/role-based-authentication-with-angular-express-jwt-mysql-part-2)
- * *Part 3: Setting up the Front-end*
+ * [Part 3: Setting up the Front end](https://hisk.io/role-based-authentication-with-angular-express-jwt-mysql-part-3)
 
  > **Note:** Currently the `master` branch is empty as the project is not yet completed. Until then, you can follow the progress on my blog and on each separate branch.
 
