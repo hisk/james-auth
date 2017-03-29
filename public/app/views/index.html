@@ -1,0 +1,44 @@
+<!doctype html>  
+<html class="no-js" lang="en" ng-app="jamesAuth">  
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JAMES Authentication</title>
+        <meta name="description" content="Authentication system using JWTs, Angular, MySQL, Express and the Sequelize ORM.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-inverse" role="navigation" ng-controller="NavController as nc">  
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="index">JAMES Authentication</a>
+            </div>
+            <ul class="nav navbar-nav pull-right" ng-if="!nc.isAuthenticated()">
+                <li><a ui-sref="login">Login</a></li>
+                <li><a ui-sref="signup">Signup</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav pull-right" ng-if="nc.isAuthenticated()">
+                <li><a ui-sref="profile">Profile</a></li>
+                <li><a ng-click="nc.logout()">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div ui-view></div>
+
+        <!-- Libraries -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+        <!-- App Scripts -->  
+        <script src="app/app.js"></script>  
+        <script src="app/services/authService.js"></script>  
+        <script src="app/controllers/loginController.js"></script>
+        <script src="app/controllers/profileController.js"></script>
+        <script src="app/controllers/adminController.js"></script>
+        <script src="app/controllers/signupController.js"></script>
+        <script src="app/controllers/navController.js"></script>
+    </body>
+</html>
