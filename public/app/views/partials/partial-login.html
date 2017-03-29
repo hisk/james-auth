@@ -1,0 +1,13 @@
+<form class="form-auth">  
+    <h2 class="form-auth-heading">Login</h2>
+
+    <div class="alert alert-danger" ng-if="lc.loginError" role="alert">{{ lc.loginErrorMessage }}</div>
+
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="text" id="inputUsername" ng-model="lc.username" class="form-control" placeholder="Username" required autofocus>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" ng-model="lc.password" class="form-control" placeholder="Password" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="lc.login()">Login</button>
+</form>  
