@@ -24,6 +24,7 @@ AuthController.signUp = function(req, res) {
                 res.status(201).json({ message: 'Account created!' });
             });
         }).catch(function(error) {
+            console.log(error);
             res.status(403).json({ message: 'Username already exists!' });
         });
     }
@@ -50,7 +51,11 @@ AuthController.authenticateUser = function(req, res) {
                             { expiresIn: '30m' }
                         );
 
-                        res.json({ success: true, token: 'JWT ' + token });
+                        res.json({
+                            success: true,
+                            token: 'JWT ' + token,
+                            role: user.role
+                        });
                     } else {
                         res.status(404).json({ message: 'Login failed!' });
                     }
