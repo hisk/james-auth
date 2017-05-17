@@ -50,7 +50,10 @@ AuthController.authenticateUser = function(req, res) {
                             { expiresIn: '30m' }
                         );
 
-                        res.json({ success: true, token: 'JWT ' + token });
+                        res.json({ success: true,
+                            token: 'JWT ' + token,
+                            role: user.role
+                        });
                     } else {
                         res.status(404).json({ message: 'Login failed!' });
                     }
